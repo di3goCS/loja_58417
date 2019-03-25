@@ -19,5 +19,7 @@ Route::get('/categoria/editar/{id}', "CategoriaController@edit");
 Route::get('/categoria/cadastro', "CategoriaController@create");
 Route::post('/categoria', "CategoriaController@store");*/
 
+Route::get('/categorias/restaurar', "CategoriaController@indexWithTrashed");
+
 Route::resource('categorias', 'CategoriaController');
 Route::resource('produtos', 'ProdutoController');

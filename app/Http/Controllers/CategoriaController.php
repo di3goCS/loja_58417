@@ -89,4 +89,10 @@ class CategoriaController extends Controller
         $categoria->delete();
         return redirect()->route('categorias.index');
     }
+
+    public function indexWithTrashed()
+    {
+        $categorias = Categoria::onlyTrashed()->get();
+        return view('categoria_restaurar', compact('categorias'));
+    }
 }

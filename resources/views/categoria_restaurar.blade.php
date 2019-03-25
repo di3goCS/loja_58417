@@ -15,11 +15,10 @@
             <td>{{$cat->id}}</td>
             <td>{{$cat->nome}}</td>
             <td>
-            <form action = "{{route('categorias.index', $cat)}}" method = "POST">
+            <form action = "/categorias/restaurar" method = "POST">
                 @csrf
-                <a class = "btn btn-success" href="{{route('categorias.edit', $cat)}}">Editar</a>
                 @method('DELETE')
-                <button type = "submit" class = "btn btn-danger">Excluir</button>
+                <a class = "btn btn-success" href="{{route('categorias.edit', $cat)}}">Restaurar</a>
             </form>  
             </td>
         </tr>
