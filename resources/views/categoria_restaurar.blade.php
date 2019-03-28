@@ -15,11 +15,8 @@
             <td>{{$cat->id}}</td>
             <td>{{$cat->nome}}</td>
             <td>
-            <form action = "/categorias/restaurar" method = "POST">
-                @csrf
-                @method('DELETE')
-                <a class = "btn btn-success" href="{{route('categorias.edit', $cat)}}">Restaurar</a>
-            </form>  
+                <a class = "btn btn-success" href="{{route('categorias.restore', $cat->id)}}">Restaurar</a>
+                <a href="{{route('categorias.delete', $cat->id)}}" class = "btn btn-danger">Apagar 4ever</a>
             </td>
         </tr>
     @endforeach

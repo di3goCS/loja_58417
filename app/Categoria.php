@@ -9,4 +9,8 @@ use Illuminate\Database\Eloquent\Model;
 class Categoria extends Model
 {
     use SoftDeletes;
+
+    public function produto(){
+        return $this->hasMany('App\Produto');
+    }
 }
